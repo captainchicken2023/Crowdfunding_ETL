@@ -76,3 +76,6 @@ Verified each table has the correct data by running a SELECT statement for each.
 Resources:
 - Office Hours
 - Course exercises
+- https://dataindependent.com/pandas/pandas-iterate-over-rows-5-methods/
+- https://sparkbyexamples.com/pandas/iterate-over-rows-in-pandas-dataframe/
+- https://www.w3schools.com/python/python_json.asp
