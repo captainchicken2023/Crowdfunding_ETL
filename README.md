@@ -79,3 +79,5 @@ Resources:
 - https://dataindependent.com/pandas/pandas-iterate-over-rows-5-methods/
 - https://sparkbyexamples.com/pandas/iterate-over-rows-in-pandas-dataframe/
 - https://www.w3schools.com/python/python_json.asp
+- https://stackoverflow.com/questions/3168644/can-a-table-field-contain-a-hyphen
+- https://www.tektutorialshub.com/sql-server/float-real-data-types-in-sql-server/

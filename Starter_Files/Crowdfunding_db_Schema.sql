@@ -27,7 +27,7 @@ CREATE TABLE Category (
 --Resource https://www.tektutorialshub.com/sql-server/float-real-data-types-in-sql-server/
 
 CREATE TABLE Campaign (
-	cf_id INT NOT NULL,
+	cf_id INT NOT NULL UNIQUE,
 	contact_id INT NOT NULL,
 	company_name VARCHAR(50),
 	description VARCHAR(200),
@@ -51,7 +51,7 @@ CREATE TABLE Campaign (
 );
 
 --Running Select * statements one at a time to verify table creation.
---After importing .CSVs, rerun statements one at a time to confirm tables are populated.
+--Refer to Verify_Table_Creation files located in Visuals folder to view these.  
 
 Select * from Subcategory;
 
@@ -61,6 +61,5 @@ Select * from Category;
 
 Select * from Campaign;
 
-
-
-
+--After importing .CSVs, rerun statements one at a time to confirm tables are populated.
+--Refer to Verify_Table_Import files located in Visuals folder to view these.
