@@ -50,6 +50,17 @@ CREATE TABLE Campaign (
 	FOREIGN KEY (category) REFERENCES Category(category)
 );
 
+--Running Select * statements one at a time to verify table creation.
+
+Select * from Subcategory;
+
+Select * from Contacts;
+
+Select * from Category;
+
+Select * from Campaign;
+
+
 
 
 
