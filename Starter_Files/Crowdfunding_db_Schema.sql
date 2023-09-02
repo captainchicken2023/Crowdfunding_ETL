@@ -1,20 +1,13 @@
-CREATE TABLE Contacts (
-	contact_id INT NOT NULL,
-	first_name CHAR(30) NOT NULL,
-	last_name CHAR(30) NOT NULL,
-	email VARCHAR(50)  NOT NULL,
-	PRIMARY KEY (contact_id)
-);
 
 CREATE TABLE Category (
 	category_id VARCHAR(12) NOT NULL,
-	category VARCHAR(30) NOT NULL,
+	category VARCHAR(30) NOT NULL UNIQUE,
 	PRIMARY KEY (category_id)
 );
 
 CREATE TABLE Subcategory (
 	subcategory_id VARCHAR(5) NOT NULL,
-	subcategory VARCHAR(30) NOT NULL,
+	subcategory VARCHAR(30) NOT NULL UNIQUE,
 	PRIMARY KEY (subcategory_id)
 );
 
@@ -35,8 +28,18 @@ CREATE TABLE Campaign (
 	subcategory VARCHAR(30) NOT NULL,
 	category_id VARCHAR(5) NOT NULL,
 	subcategory_id VARCHAR(12) NOT NULL,
-	FOREIGN KEY (contact_id) REFERENCES Contacts(contact_id),
+	PRIMARY KEY (contact_id),
+	FOREIGN KEY (subcategory_id) REFERENCES Subcategory(subcategory_id),
 	FOREIGN KEY (category_id) REFERENCES Category(category_id),
-	FOREIGN KEY (subcategory_id) REFERENCES Subcategory(subcategory_id)	
+	FOREIGN KEY (subcategory) REFERENCES Subcategory(subcategory),
+	FOREIGN KEY (category) REFERENCES Category(category)
+);
+
+CREATE TABLE Contacts (
+	contact_id INT NOT NULL,
+	first_name CHAR(30) NOT NULL,
+	last_name CHAR(30) NOT NULL,
+	email VARCHAR(50)  NOT NULL,
+	FOREIGN KEY (contact_id) REFERENCES Campaign(contact_id)
 );
 
