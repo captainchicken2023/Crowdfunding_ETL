@@ -1,15 +1,15 @@
-
+--Creating Tables with Primary Keys first
 CREATE TABLE Category (
-	category_id VARCHAR(12) NOT NULL,
+	category_id VARCHAR(5) NOT NULL,
 	category VARCHAR(30) NOT NULL UNIQUE,
 	PRIMARY KEY (category_id)
 );
 
 --https://stackoverflow.com/questions/3168644/can-a-table-field-contain-a-hyphen
---Because the column "sub-category" contains a hyphen, quotes must be used every time this columns is referenced. 
+--Because the column "sub-category" contains a hyphen, quotes must be used every time this column is referenced. 
 
 CREATE TABLE Subcategory (
-	subcategory_id VARCHAR(5) NOT NULL,
+	subcategory_id VARCHAR(12) NOT NULL,
 	"sub-category" VARCHAR(30) NOT NULL UNIQUE,
 	PRIMARY KEY (subcategory_id)
 );
@@ -19,8 +19,8 @@ CREATE TABLE Campaign (
 	contact_id INT NOT NULL,
 	company_name VARCHAR(50),
 	description VARCHAR(200),
-	goal INT,
-	pledged INT,
+	goal float,
+	pledged float,
 	outcome CHAR(12),
 	backers_count INT,
 	country CHAR(2),
@@ -45,3 +45,5 @@ CREATE TABLE Contacts (
 	email VARCHAR(50)  NOT NULL,
 	FOREIGN KEY (contact_id) REFERENCES Campaign(contact_id)
 );
+
+
