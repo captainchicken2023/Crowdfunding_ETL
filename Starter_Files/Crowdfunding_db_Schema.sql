@@ -51,6 +51,7 @@ CREATE TABLE Campaign (
 );
 
 --Running Select * statements one at a time to verify table creation.
+--After importing .CSVs, rerun statements one at a time to confirm tables are populated.
 
 Select * from Subcategory;
 
@@ -59,7 +60,6 @@ Select * from Contacts;
 Select * from Category;
 
 Select * from Campaign;
-
 
 
 
