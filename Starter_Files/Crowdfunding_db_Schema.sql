@@ -1,4 +1,7 @@
---Creating Tables with Primary Keys first
+--Refer to CrowdfundingERD.pdf contained in Visuals folder for Entity Relationship Diagram. 
+--Resource created with DiagramDraw.io
+
+--Creating Tables with Primary Keys first.
 
 --Because the column "sub-category" contains a hyphen, quotes must be used every time this column is referenced. 
 --Resource https://stackoverflow.com/questions/3168644/can-a-table-field-contain-a-hyphen
