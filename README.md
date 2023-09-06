@@ -7,20 +7,18 @@ For the ETL mini project we built an ETL pipeline using Python, Pandas, and Pyth
 The steps for this mini project are divided into the following subsections.
 
 Created the following items:
-- Category and Subcategory DataFrames
 - Campaign DataFrame
 - Contacts DataFrame
 - Crowdfunding Database
 - Category and Subcategory DataFrames
 
 
-Extracted and transformed the crowdfunding.xlsx Excel data to create category and sub-category DataFrames that has the following columns:
-- A "category_id" column and a "subcategory_id" column which has entries going sequentially from "cat1"/"subcat1" to "catn"/"subcatn", where n is the number of unique categories
+Extracted and transformed the crowdfunding.xlsx Excel data to create category and sub-category DataFrames that contain the following columns:
+- A "category_id" column and a "subcategory_id" column which has entries going sequentially from "cat1"/"subcat1" to "catn"/"subcatn", where n is the number of unique categories/subcategories
 - A "category" column and a "subcategory" column that contains only the category/subcategory titles
 - Produced a category DataFrame and a subcategory DataFrame
-- The DataFrames were exported and saved as "category.csv" and "subcategory.csv" in the GitHub repository, respectively
+- The DataFrames were exported and saved as "category.csv" and "subcategory.csv" in the GitHub repository
 
-Campaign DataFrame
 Extracted and transformed the crowdfunding.xlsx Excel data to create a campaign DataFrame with the following columns:
 - "cf_id" 
 - "contact_id" 
@@ -32,15 +30,13 @@ Extracted and transformed the crowdfunding.xlsx Excel data to create a campaign 
 - "backers_count" 
 - "country" 
 - "currency" 
-- "launched_at" (renamed to "launch_date" and with the UTC times converted to the datetime format)
-- "deadline" (renamed to "end_date" and with the UTC times converted to the datetime format)
+- "launched_at" (renamed to "launch_date" with the UTC times converted to the datetime format)
+- "deadline" (renamed to "end_date" with the UTC times converted to the datetime format)
 - "category_id" (with unique identification numbers matching those in the "category_id" column of the category DataFrame)
 - "subcategory_id" (with the unique identification numbers matching those in the "subcategory_id" column of the subcategory DataFrame)
 
 The DataFrame was exported and saved as "campaign.csv" in the GitHub repository.
 
-
-Contacts DataFrame
 Using Python dictionary methods, we extracted and transformed the data from the contacts.xlsx Excel data.
 
 Imported the contacts.xlsx file into a DataFrame.
@@ -54,17 +50,16 @@ Iterated through each dictionary, doing the following:
 The DataFrame was exported and saved as "contacts.csv" in the GitHub repository.
 
 
-Created the Crowdfunding Database
-Inspected the four CSV files and sketched an ERD of the tables by using QuickDBDLinks to an external site.
-Used the information from the ERD to create a table schema for each CSV file.
-Constraints, data types, primary keys, and foreign keys have been specified.
-Saved the database schema as a Postgres file "crowdfunding_db_schema.sql", and saved it to this repository.
+Finally, we inspected the four CSV files and sketched an ERD of the tables by using QuickDBDLinks to an external site.
+- Used the information from the ERD to create a table schema for each CSV file.
+- Constraints, data types, primary keys, and foreign keys have been specified.
+- Saved the database schema as a Postgres file "crowdfunding_db_schema.sql", and saved it to this repository.
 
-Created a new Postgres database named "crowdfunding_db".
-Used the database schema to create the tables in the correct order to handle the foreign keys.
-Verified the table creation by running a SELECT statement for each table.
-Imported each CSV file into its corresponding SQL table.
-Verified each table has the correct data by running a SELECT statement for each.
+We created a new Postgres database named "crowdfunding_db".
+- Used the database schema to create the tables in the correct order to handle the foreign keys.
+- Verified the table creation by running a SELECT statement for each table.
+- Imported each CSV file into its corresponding SQL table.
+- Verified each table has the correct data by running a SELECT statement for each.
 
 Screen shots of the tables, ERD, and database are included in the GitHub repository.
 
