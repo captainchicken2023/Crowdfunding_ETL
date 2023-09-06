@@ -55,13 +55,13 @@ Finally, we inspected the four CSV files and sketched an ERD of the tables by us
 - Constraints, data types, primary keys, and foreign keys have been specified.
 - Saved the database schema as a Postgres file "crowdfunding_db_schema.sql", and saved it to this repository.
 
-We created a new Postgres database named "crowdfunding_db".
+We named the Postgres database "crowdfunding_db".
 - Used the database schema to create the tables in the correct order to handle the foreign keys.
 - Verified the table creation by running a SELECT statement for each table.
 - Imported each CSV file into its corresponding SQL table.
 - Verified each table has the correct data by running a SELECT statement for each.
 
-Screen shots of the tables, ERD, and database are included in the GitHub repository.
+Screen shots of the tables, ERD, and Postgres database are included in the GitHub repository.
 
 
 Resources:
